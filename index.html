@@ -12,22 +12,37 @@
 
     <script>
 
-    
-      $(function(){
-         
-         var $div = $('div')
-         console.log($div)
+    //1.定义一个类
+    function AClass(){
 
-      })
-     
-      //jQuery对象是一个伪数组
+    }
+    
+     //2.给这个类添加一个静态方法
+     //直接添加给类的就是静态方法
+
+     AClass.staticMethod = function(){
+         alert('staticMethod')
+     }
+
+    //静态方法通过类名调用
+    AClass.staticMethod()
+
+
+    //3.给这个类添加一个实例方法
+    AClass.prototype.instanceMethod = function(){
+        alert('instanceMethod')
+    }
+     //实例方法通过类的实例调用
+     //创建一个实例（对象）
+
+     var a = new AClass()
+     //通过实例调用实例方法
+     a.instanceMethod()
 
 
     
     </script>
 
-    <div>div1</div>
-    <div>div2</div>
-    <div>div3</div>
+ 
 </body>
 </html>
