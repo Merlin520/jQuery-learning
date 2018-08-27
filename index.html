@@ -12,32 +12,22 @@
 
     <script>
 
-      //$();就代表调用jQuery的核心函数
-      //1.接收一个函数
+    
       $(function(){
-          alert('hello world')
-           //2.接收一个字符串
-           //2.1接收一个字符串选择器
-           //返回一个jQuery对象，对象中保存了找到的dom元素
-           var $box1 = $('.box1')
-           var $box2 = $('#box2')
-           console.log($box1)
-           console.log($box2)
-           //2.2接收一个字符串代码片段
-          //返回一个jQuery对象，对象中保存了创建的dom元素
-           var $p = $('<p>我是段落</p>')
-           console.log($p)
-           //3.接收一个DOM元素
-           //会被包装成一个jQuery对象返回给我们
+         
+         var $div = $('div')
+         console.log($div)
+
       })
      
-   
+      //jQuery对象是一个伪数组
 
 
     
     </script>
 
-    <div class="box1"></div>
-    <div id="box2"></div>
+    <div>div1</div>
+    <div>div2</div>
+    <div>div3</div>
 </body>
 </html>
