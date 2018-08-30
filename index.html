@@ -7,38 +7,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>jquery</title>
-</head>
-<body>
+
 
     <script>
+        //$.holdReady(true)
+        //作用：暂停ready执行
+        $.holdReady(true)
+        $(document).ready(function(){
+            alert('ready')
+        })
+    </script>
+</head>
 
-     var str =  '    hello world     '
+<body>
+        <button>恢复ready事件</button>
+    <script>
 
-     var res = $.trim(str)
-
-     console.log('-----'+str+'------')
-     console.log('-----'+res+'------')
-    //$.trim()
-    //作用：去除字符串两端的空格
-    //参数：需要去除空格的字符串
-    //返回值：去除空格后的字符串
-
-
-     var res = $.isWindow(xxx)
-     console.log(res)   
-    //$.iswindow();
-    //作用：判断传入的对象是否是window对象
-    //返回值：true/false
-
-    //$.isArray();
-    //作用：判断传入的对象是否是数组
-    //返回值：true/false    
-
-     //$.isFunction();
-    //作用：判断传入的对象是否是函数
-    //返回值：true/false 
-    //jQuery框架本质是一个函数
-
+       var but = document.getElementsByTagName('button')[0]
+            but.onclick = function(){
+                $.holdReady(false)
+               
+            }
 
     </script>
 
